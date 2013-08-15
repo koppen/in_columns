@@ -34,9 +34,3 @@ class ColumnizerTest < MiniTest::Unit::TestCase
   end
 
 end
-
-class CoreExtensionTest < MiniTest::Unit::TestCase
-  def test_does_not_extend_array_by_default
-    assert ![].respond_to?(:in_columns)
-  end
-end
