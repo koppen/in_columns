@@ -3,10 +3,10 @@
 InColumns distributes the elements of an array into a number of equal-height columns.
 
     list = ['a', 'b', 'c', 'd', 'e']
-    InColumns::Columnizer.new(list).columns(2)
+    InColumns.columnize(list, 2)
     #=> [['a', 'c', 'e'], ['b', 'd']]
     
-    InColumns::Columnizer.new(list).columns(3)
+    InColumns.columnize(list, 3)
     #=> [['a', 'd'], ['b', 'e'], ['c']]
 
 This is useful when you want to format a straight array into a number of
