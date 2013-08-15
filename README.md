@@ -2,15 +2,19 @@
 
 InColumns distributes the elements of an array into a number of equal-height columns.
 
+This is useful when you want to format a straight array into a number of
+columns - say for displaying it to an end user.
+
+[![Build Status](https://travis-ci.org/koppen/in_columns.png?branch=master)](https://travis-ci.org/koppen/in_columns) [![Coverage Status](https://coveralls.io/repos/koppen/in_columns/badge.png)](https://coveralls.io/r/koppen/in_columns) [![Code Climate](https://codeclimate.com/github/koppen/in_columns.png)](https://codeclimate.com/github/koppen/in_columns)
+
+## Usage example
+
     list = ['a', 'b', 'c', 'd', 'e']
     InColumns.columnize(list, 2)
     #=> [['a', 'c', 'e'], ['b', 'd']]
     
     InColumns.columnize(list, 3)
     #=> [['a', 'd'], ['b', 'e'], ['c']]
-
-This is useful when you want to format a straight array into a number of
-columns - say for displaying it to an end user.
 
 ## Extension to Array
 
