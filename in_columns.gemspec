@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["jakob@mentalized.net"]
   spec.description   = %q{InColumns distributes the elements of an array into a number of equal-height columns.}
   spec.summary       = %q{Distributes array elements into columns.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/koppen/in_columns"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
