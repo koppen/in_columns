@@ -12,6 +12,18 @@ InColumns distributes the elements of an array into a number of equal-height col
 This is useful when you want to format a straight array into a number of
 columns - say for displaying it to an end user.
 
+## Extension to Array
+
+If you feel so inclined, InColumns comes with a module that can be included
+wherever you need columnizability (yes, that's totally a word):
+
+    class Array
+      include InColumns::ArrayExt
+    end
+    
+    ['a', 'b', 'c'].in_columns(2)
+    #=> [['a', 'c'], ['b']]
+
 ## Installation
 
 Add this line to your application's Gemfile:

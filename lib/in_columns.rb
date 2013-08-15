@@ -1,4 +1,6 @@
 require "in_columns/version"
+
+require "in_columns/array_ext"
 require "in_columns/columnizer"
 
 module InColumns
