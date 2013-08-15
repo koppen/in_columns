@@ -16,11 +16,7 @@ class Columnizer
   attr_reader :elements
 
   def create_columns(number_of_columns)
-    columns = []
-    number_of_columns.times {
-      columns << []
-    }
-    columns
+    (1..number_of_columns).collect { [] }
   end
 
   def distribute_elements(columns)
