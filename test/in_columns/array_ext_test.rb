@@ -6,10 +6,13 @@ class ArrayExtensionTest < MiniTest::Unit::TestCase
   end
 
   def test_distributes_array_into_columns
-    assert_equal [['a', 'c', 'e'], ['b', 'd']], ['a', 'b', 'c', 'd', 'e'].in_columns(2)
+    assert_equal [
+      ['a', 'c', 'e'],
+      ['b', 'd', nil]
+    ], ['a', 'b', 'c', 'd', 'e'].in_columns(3)
   end
 
   def test_works_for_empty_array
-    assert_equal [[], [], []], [].in_columns(3)
+    assert_equal [], [].in_columns(3)
   end
 end
