@@ -1,7 +1,7 @@
 module InColumns
   class Columnizer
     def initialize(elements)
-      @elements = elements.dup
+      @elements = elements
     end
 
     def columns(number_of_columns)
@@ -18,7 +18,8 @@ module InColumns
       counts = row_counts(number_of_columns)
 
       columns = []
-      elements_to_distribute = elements
+      elements_to_distribute = elements.dup
+
       while !elements_to_distribute.empty?
         size_of_column = counts[columns.size]
         elements_for_column = elements_to_distribute.shift(size_of_column)

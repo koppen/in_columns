@@ -111,4 +111,10 @@ class ColumnizerTest < MiniTest::Unit::TestCase
       ['d', nil, nil]
     ], output
   end
+
+  def test_can_be_run_multiple_times
+    input = ['a', 'b']
+    columnizer = InColumns::Columnizer.new(input)
+    assert_equal columnizer.columns(3), columnizer.columns(3)
+  end
 end
