@@ -4,7 +4,14 @@ module InColumns
       @elements = elements
     end
 
-    def columns(number_of_columns)
+    # Returns the necessary rows to distribute elements into the desired number
+    # of columns
+    #
+    # The result is a multidimensional array, so that:
+    #
+    #   Columnizer.new(['a', 'b', 'c']).distribute(2)
+    #   #=> [['a', 'c'], ['b', nil]]
+    def distribute(number_of_columns)
       return [] if elements.empty?
       distribute_elements(number_of_columns)
     end
