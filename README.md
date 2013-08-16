@@ -10,11 +10,11 @@ columns - say for displaying it to an end user.
 ## Usage example
 
     list = ['a', 'b', 'c', 'd', 'e']
-    InColumns.columnize(list, 2)
-    #=> [['a', 'c', 'e'], ['b', 'd']]
-    
     InColumns.columnize(list, 3)
-    #=> [['a', 'd'], ['b', 'e'], ['c']]
+    #=> [['a', 'c', 'e'], ['b', 'd', nil]]
+    
+    InColumns.columnize(list, 2)
+    #=> [['a', 'd'], ['b', 'e'], ['c', nil]]
 
 ## Extension to Array
 
@@ -26,7 +26,7 @@ wherever you need columnizability (yes, that's totally a word):
     end
     
     ['a', 'b', 'c'].in_columns(2)
-    #=> [['a', 'c'], ['b']]
+    #=> [['a', 'c'], ['b', nil]]
 
 ## Installation
 

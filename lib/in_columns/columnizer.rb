@@ -33,6 +33,7 @@ module InColumns
         columns << elements_for_column
       end
 
+      # Convert the columns to rows
       first_column = columns.first
       rest_columns = columns[1..-1]
       columns = first_column.zip(*rest_columns)
